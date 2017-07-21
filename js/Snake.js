@@ -50,7 +50,7 @@ Snake.prototype.update = function(){
 	}
 
 	//检测一下即将走到的这个位置是不是已经有蛇的身子了。
-	//所以我们要检测一下你刚刚插入的数组第0项是不是也是数组其他项。
+	//所以要检测一下你刚刚插入的数组第0项是不是也是数组其他项。
 	//如果是，就表示蛇头撞到了自己的身体。
 	for(var i = 1 ; i < this.body.length ; i++){
 		if(this.body[i].x == this.body[0].x && this.body[i].y == this.body[0].y){

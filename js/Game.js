@@ -2,9 +2,9 @@
 function Game(){
 	//这是一个存放所有小格的数组
 	this.tds = [];
-	//自己的蛇
+	//蛇
 	this.snake = new Snake();
-	//自己的食物
+	//食物
 	//等到start的时候才赋予食物
 	// this.food = null;
 	//new出Game类的时候，要执行初始化的操作
@@ -57,7 +57,7 @@ Game.prototype.start = function(){
 		//每10帧更新蛇、渲染蛇
 		if(self.frame % 10 == 0){
 			//先更新蛇，然后渲染蛇
-			//我们这里是短路语法，因为当sknake碰壁、碰到自己身体的时候，会reutrn false。
+			//短路语法，因为当sknake碰壁、碰到自己身体的时候，会reutrn false。
 			//所以此时后面的render()语句被短路。表示碰壁了、碰到自己了就不用render了。
 			self.snake.update() && self.snake.render();
 		}
